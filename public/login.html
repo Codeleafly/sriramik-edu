@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriramik EduPortal - Login</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-slate-900 min-h-screen transition-all duration-500">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-xl border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-30"></div>
+                        <i class="fas fa-graduation-cap text-3xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent relative z-10"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-poppins">Sriramik EduPortal</h1>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Created by Sriramik</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 group">
+                        <i class="fas fa-sun text-yellow-500 dark:hidden group-hover:rotate-180 transition-transform duration-300"></i>
+                        <i class="fas fa-moon text-blue-400 hidden dark:block group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Page -->
+    <div class="min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <div class="text-center relative">
+                <div class="relative inline-block mb-8">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 scale-150"></div>
+                    <div class="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-6 rounded-full">
+                        <i class="fas fa-user-graduate text-white text-4xl"></i>
+                    </div>
+                </div>
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3 font-poppins">Welcome to Sriramik EduPortal</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium">Your gateway to premium education</p>
+                <div class="mt-4 flex items-center justify-center space-x-2">
+                    <div class="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent flex-1"></div>
+                    <span class="text-xs text-gray-400 dark:text-gray-500 px-3 font-medium">Created by Sriramik</span>
+                    <div class="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent flex-1"></div>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md">
+                <div class="flex">
+                    <i class="fas fa-exclamation-triangle mr-2 mt-0.5"></i>
+                    <span id="error-text"></span>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-message" class="hidden bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-md">
+                <div class="flex">
+                    <i class="fas fa-check-circle mr-2 mt-0.5"></i>
+                    <span id="success-text"></span>
+                </div>
+            </div>
+
+            <!-- Role Selection -->
+            <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl p-8 rounded-2xl shadow-2xl border border-white/20 dark:border-gray-700/20">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center font-poppins">Choose Your Path</h3>
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <button class="role-btn group p-6 border-2 border-gray-200 dark:border-gray-600 rounded-2xl hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/30 dark:hover:to-purple-900/30 transition-all duration-500 transform hover:scale-105 hover:shadow-xl active" data-role="student">
+                        <div class="relative mb-4">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <i class="fas fa-user-graduate text-3xl text-blue-600 dark:text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        <div class="font-bold text-gray-900 dark:text-white text-lg">Student</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300 mt-2">Explore premium learning content</div>
+                    </button>
+                    <button class="role-btn group p-6 border-2 border-gray-200 dark:border-gray-600 rounded-2xl hover:border-purple-500 hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 dark:hover:from-purple-900/30 dark:hover:to-pink-900/30 transition-all duration-500 transform hover:scale-105 hover:shadow-xl" data-role="teacher">
+                        <div class="relative mb-4">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <i class="fas fa-chalkboard-user text-3xl text-purple-600 dark:text-purple-400 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        <div class="font-bold text-gray-900 dark:text-white text-lg">Teacher</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300 mt-2">Create and share knowledge</div>
+                    </button>
+                </div>
+
+                <!-- Auth Toggle -->
+                <div class="flex bg-gray-100 dark:bg-gray-700 rounded-xl p-1 mb-8">
+                    <button class="auth-toggle flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105" data-auth="login">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Sign In
+                    </button>
+                    <button class="auth-toggle flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-gray-600/50" data-auth="signup">
+                        <i class="fas fa-user-plus mr-2"></i>Sign Up
+                    </button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>Email Address
+                        </label>
+                        <div class="relative">
+                            <input type="email" id="login-email" required class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="Enter your email address">
+                            <i class="fas fa-at absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            <i class="fas fa-lock mr-2 text-purple-500"></i>Password
+                        </label>
+                        <div class="relative">
+                            <input type="password" id="login-password" required class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-purple-500/20 focus:border-purple-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="Enter your password">
+                            <i class="fas fa-key absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 px-6 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Sign In to Portal</span>
+                    </button>
+                </form>
+
+                <!-- Signup Form (Hidden by default) -->
+                <form id="signup-form" class="space-y-6 hidden">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            <i class="fas fa-user mr-2 text-green-500"></i>Full Name
+                        </label>
+                        <div class="relative">
+                            <input type="text" id="signup-name" required class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-green-500/20 focus:border-green-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="Enter your full name">
+                            <i class="fas fa-id-card absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>Email Address
+                        </label>
+                        <div class="relative">
+                            <input type="email" id="signup-email" required class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="Enter your email address">
+                            <i class="fas fa-at absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            <i class="fas fa-lock mr-2 text-purple-500"></i>Password
+                        </label>
+                        <div class="relative">
+                            <input type="password" id="signup-password" required class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-purple-500/20 focus:border-purple-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="Create a strong password">
+                            <i class="fas fa-key absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            <i class="fas fa-shield-alt mr-2 text-orange-500"></i>Confirm Password
+                        </label>
+                        <div class="relative">
+                            <input type="password" id="signup-confirm-password" required class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="Confirm your password">
+                            <i class="fas fa-check-double absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 px-6 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Create Account</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize login page
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeAuth();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriramik EduPortal - Teacher Dashboard</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-slate-900 min-h-screen transition-all duration-500">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-xl border-b border-gray-200/50 dark:border-gray-700/50 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-30"></div>
+                        <i class="fas fa-graduation-cap text-3xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent relative z-10"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-poppins">Sriramik EduPortal</h1>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Created by Sriramik</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 group">
+                        <i class="fas fa-sun text-yellow-500 dark:hidden group-hover:rotate-180 transition-transform duration-300"></i>
+                        <i class="fas fa-moon text-blue-400 hidden dark:block group-hover:rotate-180 transition-transform duration-300"></i>
+                    </button>
+                    <button onclick="logout()" class="px-6 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-400 transition-all duration-300 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/40 rounded-xl border border-red-200 dark:border-red-800">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Teacher Dashboard -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header -->
+        <div class="mb-12">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-poppins mb-4">Teacher Dashboard</h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Create and share knowledge with the world</p>
+                    <div class="mt-4 flex items-center space-x-2">
+                        <div class="h-px bg-gradient-to-r from-blue-500 to-purple-500 w-24"></div>
+                        <span class="text-sm text-gray-400 dark:text-gray-500 px-3 font-medium">Created by Sriramik</span>
+                        <div class="h-px bg-gradient-to-r from-purple-500 to-pink-500 w-24"></div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="text-right">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Welcome back,</p>
+                        <p id="teacher-name" class="text-xl font-bold text-gray-900 dark:text-white">Teacher</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-30"></div>
+                        <div class="relative w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
+                            <i class="fas fa-chalkboard-user text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error/Success Messages -->
+        <div id="message-container" class="mb-6"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Upload Form -->
+            <div class="lg:col-span-1">
+                <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 dark:border-gray-700/20 p-8 sticky top-8">
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500 rounded-full blur-md opacity-30"></div>
+                            <i class="fas fa-cloud-upload-alt text-2xl bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent relative z-10"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white font-poppins">Upload Content</h2>
+                    </div>
+                    <form id="content-form" class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                <i class="fas fa-heading mr-2 text-blue-500"></i>Content Title
+                            </label>
+                            <div class="relative">
+                                <input type="text" id="content-title" required class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="Enter an engaging title">
+                                <i class="fas fa-edit absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                <i class="fas fa-book mr-2 text-purple-500"></i>Subject Category
+                            </label>
+                            <div class="relative">
+                                <select id="content-subject" class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-purple-500/20 focus:border-purple-500 transition-all duration-300 text-gray-900 dark:text-white appearance-none backdrop-blur-sm">
+                                    <option value="Mathematics">📊 Mathematics</option>
+                                    <option value="Science">🔬 Science</option>
+                                    <option value="English">📚 English</option>
+                                    <option value="History">🏛️ History</option>
+                                    <option value="Computer Science">💻 Computer Science</option>
+                                    <option value="Physics">⚛️ Physics</option>
+                                    <option value="Chemistry">🧪 Chemistry</option>
+                                    <option value="Biology">🧬 Biology</option>
+                                </select>
+                                <i class="fas fa-graduation-cap absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                <i class="fab fa-youtube mr-2 text-red-500"></i>YouTube Video Link
+                            </label>
+                            <div class="relative">
+                                <input type="url" id="youtube-link" class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500/20 focus:border-red-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="https://youtube.com/watch?v=...">
+                                <i class="fab fa-youtube absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                <i class="fab fa-google-drive mr-2 text-green-500"></i>Google Drive Link
+                            </label>
+                            <div class="relative">
+                                <input type="url" id="drive-link" class="w-full px-4 py-4 pl-12 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-green-500/20 focus:border-green-500 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-sm" placeholder="https://drive.google.com/file/d/...">
+                                <i class="fab fa-google-drive absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 px-6 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3">
+                            <i class="fas fa-cloud-upload-alt text-xl"></i>
+                            <span>Upload Content</span>
+                            <i class="fas fa-sparkles"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="lg:col-span-2">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-semibold text-gray-900">Your Content</h2>
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <i class="fas fa-video"></i>
+                        <span id="content-count">0 items</span>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading-content" class="text-center py-8">
+                    <i class="fas fa-spinner fa-spin text-2xl text-gray-400 mb-4"></i>
+                    <p class="text-gray-500">Loading your content...</p>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-content" class="text-center py-12 hidden">
+                    <i class="fas fa-folder-open text-4xl text-gray-300 mb-4"></i>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">No content yet</h3>
+                    <p class="text-gray-500">Upload your first piece of educational content to get started.</p>
+                </div>
+
+                <!-- Content Cards -->
+                <div id="content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 hidden">
+                    <!-- Content cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize teacher dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            checkAuth('teacher');
+            initializeTeacherDashboard();
+        });
+    </script>
+</body>
+</html>

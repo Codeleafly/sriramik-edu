@@ -1,0 +1,120 @@
+[
+  {
+    "id": "1751281332618",
+    "username": "Sriramik",
+    "email": "ziprecovery2024@gmail.com",
+    "password": "$2b$10$cYESDJZAjnTRTplukjEOkOwb18hAo0zC9b2Kx6YT56CCYcB1PWEim",
+    "role": "teacher",
+    "createdAt": "2025-06-30T11:02:12.618Z",
+    "content": [
+      {
+        "id": "1751293306146",
+        "title": "Class 8th shradha karma && shradhaGeography: 1 all about natural resources Topic: what is a resource?",
+        "subject": "History",
+        "youtubeLink": "https://youtu.be/yrPZrmqThSw?si=NStMF0KBTg7W1M5Z",
+        "youtubeId": "yrPZrmqThSw",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:21:46.146Z"
+      },
+      {
+        "id": "1751293528425",
+        "title": "Class 8 Geography: 1 all about natural resources Topic: nature resources",
+        "subject": "History",
+        "youtubeLink": "https://youtu.be/Ccf-navDt3c?si=gckm59PhZykxSIvB",
+        "youtubeId": "Ccf-navDt3c",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:25:28.425Z"
+      },
+      {
+        "id": "1751293622358",
+        "title": "Interesting chemistry not a school",
+        "subject": "Chemistry",
+        "youtubeLink": "https://youtu.be/RgGWoxRBvsg?si=dAbcX-C4Th_eVJiE",
+        "youtubeId": "RgGWoxRBvsg",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:27:02.358Z"
+      },
+      {
+        "id": "1751293687195",
+        "title": "How are earth formed in Hindi",
+        "subject": "Science",
+        "youtubeLink": "https://youtu.be/2Wswddo2KTE?si=iFTDl7QVpDMQy99M",
+        "youtubeId": "2Wswddo2KTE",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:28:07.195Z"
+      },
+      {
+        "id": "1751293904792",
+        "title": "Class 8 Geography: 1 all about natural resources Topic: man made resources and human resources",
+        "subject": "History",
+        "youtubeLink": "https://youtu.be/4gFZ5Bbu69E?si=dDiQigrqT9ky6BHu",
+        "youtubeId": "4gFZ5Bbu69E",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:31:44.792Z"
+      },
+      {
+        "id": "1751294146643",
+        "title": "Class 8 geography: 1 all about a natural resources topic conserving resources",
+        "subject": "History",
+        "youtubeLink": "https://youtu.be/9MjwzQyTHss?si=JUgZKdszkylHUljM",
+        "youtubeId": "9MjwzQyTHss",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:35:46.643Z"
+      },
+      {
+        "id": "1751294754655",
+        "title": "Grade 10 chemistry",
+        "subject": "Chemistry",
+        "youtubeLink": "https://youtu.be/AEyJ0MpddzQ?si=H-fh892iSxb8zRNX",
+        "youtubeId": "AEyJ0MpddzQ",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:45:54.655Z"
+      },
+      {
+        "id": "1751294837198",
+        "title": "Grade 12 science ",
+        "subject": "Mathematics",
+        "youtubeLink": "https://youtu.be/JfyA459vExk?si=ZxMsoeJD26FOYxzx",
+        "youtubeId": "JfyA459vExk",
+        "driveLink": null,
+        "driveId": null,
+        "createdAt": "2025-06-30T14:47:17.198Z"
+      },
+      {
+        "id": "1751296528010",
+        "title": "Learn python from basic",
+        "subject": "Computer Science",
+        "youtubeLink": null,
+        "youtubeId": null,
+        "driveLink": "https://drive.google.com/file/d/1T-x5lpyqdMDYvAnZyJ43ReWiS_w8geOI/view?usp=drivesdk",
+        "driveId": "1T-x5lpyqdMDYvAnZyJ43ReWiS_w8geOI",
+        "createdAt": "2025-06-30T15:15:28.010Z"
+      }
+    ]
+  },
+  {
+    "id": "1751294906647",
+    "username": "Daiwik",
+    "email": "daiwik200@outlook.com",
+    "password": "$2b$10$gpTrKKDAtuZHPItThW7VeeDuiEJTriits782Gi2qwrQPpIUH6oLm6",
+    "role": "teacher",
+    "createdAt": "2025-06-30T14:48:26.647Z",
+    "content": []
+  },
+  {
+    "id": "1751295206401",
+    "username": "Shiuvan all teachers",
+    "email": "teach@all.in",
+    "password": "$2b$10$MLD3pigcEWj3i4Ao1okfw.d0pc4YTi/8ul4TtMXpi6DfoBTu/l3CC",
+    "role": "teacher",
+    "createdAt": "2025-06-30T14:53:26.401Z",
+    "content": []
+  }
+]

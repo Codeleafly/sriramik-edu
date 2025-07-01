@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1751281565358",
+    "username": "Sriramik",
+    "email": "ziprecovery2024@gmail.com",
+    "password": "$2b$10$abfld9sanFwRDFhguMxIsuNvnv7cuV4B8TePkYRet2pzWQcsGWQIq",
+    "role": "student",
+    "createdAt": "2025-06-30T11:06:05.358Z",
+    "joinedTeachers": [
+      "1751281332618"
+    ]
+  },
+  {
+    "id": "1751295084722",
+    "username": "Shiuvan all teachers",
+    "email": "1@e.com",
+    "password": "$2b$10$ceFTFhQ8XH/tO8Oc3vhYYe8O6sVwiWKEc7bqbipQUTXMsmb1FWIQK",
+    "role": "student",
+    "createdAt": "2025-06-30T14:51:24.722Z",
+    "joinedTeachers": [
+      "1751281332618"
+    ]
+  }
+]
