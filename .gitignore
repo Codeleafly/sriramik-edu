@@ -4,3 +4,24 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+# Ignore everything
+*
+
+# But allow only these
+!attached_assets/
+!client/
+!components.json
+!drizzle.config.ts
+!index.cjs
+!package.json
+!postcss.config.js
+!public/
+!README.md
+!server/
+!server.cjs
+!shared/
+!student.json
+!tailwind.config.ts
+!teach.json
+!tsconfig.json
+!vite.config.ts
