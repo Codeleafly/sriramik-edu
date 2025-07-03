@@ -20,5 +20,14 @@
     "joinedTeachers": [
       "1751281332618"
     ]
+  },
+  {
+    "id": "1751546674279",
+    "username": "student",
+    "email": "s@student.com",
+    "password": "$2b$10$968ESnpRL58ZV5MqZ.zQVOdDm5aCTmC18FOmd5BszMhErXEMo.6ku",
+    "role": "student",
+    "createdAt": "2025-07-03T12:44:34.279Z",
+    "joinedTeachers": []
   }
 ]
